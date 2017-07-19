@@ -4,7 +4,6 @@ exports.arraysAnswers = {
 	indexOf: function (arr, item) {
 		return arr.indexOf(item);
 	},
-
 	sum: function (arr) {
 		var sum = 0;
 		arr.forEach(function (elem) {
@@ -62,15 +61,27 @@ exports.arraysAnswers = {
 	},
 
 	concat: function (arr1, arr2) {
-		return concat(arr1, arr2);
+		var result =  arr1.concat(arr2);
+
+		return result;
 	},
 
 	insert: function (arr, item, index) {
 
+	    arr.splice(index, 0, item);
+
+        return arr;
+
 	},
 
 	count: function (arr, item) {
+	    var count = 0;
 
+	    arr.forEach(function (elem) {
+           if (elem === item) { count ++ }
+        });
+
+        return count;
 	},
 
 	duplicates: function (arr) {
@@ -79,9 +90,25 @@ exports.arraysAnswers = {
 
 	square: function (arr) {
 
+	    var arr2=[];
+        var c;
+
+        for(i=0; i < arr.length; i++) {
+            c = Math.pow(arr[i],2);
+            arr2.push(c);
+        }
+        return arr2;
 	},
 
 	findAllOccurrences: function (arr, target) {
+    var count = 0;
 
+    for(  var i=0; i < arr.length; i++) {
+        if(arr[i] == target) {
+            count++
+        }
+    }
+
+    return count;
 	}
 };
