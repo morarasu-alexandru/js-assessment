@@ -14,6 +14,11 @@ exports.numbersAnswers = {
   },
 
   multiply: function(a, b) {
+  var result;
+  result = Math.m(a,b);
+
+
+  return result;
 
   }
 };
