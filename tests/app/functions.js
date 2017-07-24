@@ -63,6 +63,8 @@ describe('functions', function() {
     var c = Math.random();
     var d = Math.random();
 
+
+
     expect(functionsAnswers.useArguments(a)).to.eql(a);
     expect(functionsAnswers.useArguments(a, b)).to.eql(a + b);
     expect(functionsAnswers.useArguments(a, b, c)).to.eql(a + b + c);
