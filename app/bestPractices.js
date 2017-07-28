@@ -11,6 +11,7 @@ exports.bestPracticesAnswers = {
   globals: function() {
 
     myObject = {
+
       name: 'Jory'
     }();
 
