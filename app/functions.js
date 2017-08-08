@@ -10,11 +10,6 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
-      new function (str) {
-        return function(str) {
-          return str
-        }
-      };
 
   },
 

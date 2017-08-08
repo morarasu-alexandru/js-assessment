@@ -11,5 +11,11 @@ exports.stringsAnswers = {
 
   reverseString: function(str) {
 
+	  var newstr = "";
+
+	  for (i = str.length - 1; i >= 0; i--) {
+		  newstr = newstr + str[i]
+	  }
+	  return newstr;
   }
 };

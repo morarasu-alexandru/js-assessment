@@ -86,6 +86,20 @@ exports.arraysAnswers = {
 
 	duplicates: function (arr) {
 
+		var arr2 = [];
+
+		for(i=0; i<arr.length; i++) {
+		    for (j=i+1; j<arr.length; j++) {
+		      if(arr[i] === arr[j] && !(arr2.indexOf(arr[i]) != -1) ) {
+		        arr2.push(arr[i]);
+		      }
+		    }
+
+		}
+
+
+		return arr2;
+
 	},
 
 	square: function (arr) {
@@ -101,14 +115,13 @@ exports.arraysAnswers = {
 	},
 
 	findAllOccurrences: function (arr, target) {
-    var count = 0;
+		var arr2 = [];
 
-	for(i=0; i > arr.length; i++) {
-		if (target === arr[i]) {
-			count = count + 1;
+		while(arr.indexOf(target) !== -1) {
+		  arr2.push(arr.indexOf(target));
+		  arr[arr.indexOf(target)] = null;
 		}
-	}
 
-    return count;
+		return arr2;
 	}
 };
